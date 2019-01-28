@@ -22,6 +22,14 @@ func TestNewClientBase64EncodesCredentials(t *testing.T) {
 	}
 }
 
+func TestNewClientSetsDefaultHTTPClientIfNotSet(t *testing.T) {
+	c := NewClient("test@test.com", "password")
+
+	if c.httpClient != http.DefaultClient {
+		t.Error("Expected httpClient to be set to DefaultClient")
+	}
+}
+
 func TestNewRequestSetsAcceptHeader(t *testing.T) {
 	c := NewClient("test@test.com", "password")
 
