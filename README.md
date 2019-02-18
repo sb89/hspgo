@@ -1,4 +1,6 @@
 # hspgo
+[![Build Status](https://travis-ci.com/sb89/hspgo.svg?branch=master)](https://travis-ci.com/sb89/hspgo)
+
 HSP API wrapper for Go
 
 Documentation
